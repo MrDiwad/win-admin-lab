@@ -1,1 +1,100 @@
-# win-admin-lab
+# windows-admin-lab
+
+Main goal of this project is to learn by practice how to administer Windows-based environments.
+
+# Technologies to learn:
+
+- Windows Server administration
+- Windows client administration
+- networking and troubleshooting
+- remote administration
+- Active Directory and DNS
+- DHCP
+- users, groups and permissions
+- PowerShell
+- processes and services
+- Windows logs and monitoring
+- Windows Firewall and security
+- Group Policy
+- automation
+- backup and recovery
+
+# Environment
+
+- Windows 11 host
+- Windows Server 2025 Standard Evaluation — Desktop Experience guest (`DC01`)
+- Windows 11 Enterprise guest (`WIN11-01`)
+- Oracle VirtualBox
+- Isolated VirtualBox Internal Network: `win-admin-lab`
+- `DC01`: 4096 MB RAM, 2 CPU, 50 GB dynamically allocated disk
+- `DC01` IPv4 address: `10.0.0.1/24`
+- `WIN11-01` IPv4 address: `10.0.0.10/24`
+- Gateway on `DC01`: none — intentionally isolated from the Internet
+- DNS on `DC01`: `10.0.0.1`
+- Planned lab domain: `corp.test`
+
+# Lab architecture
+
+```text
+                      Windows Server
+                           DC01
+                    10.0.0.1/24
+                           │
+                 Internal Network
+                   win-admin-lab
+                           │
+                    WIN11-01
+                  10.0.0.10/24
+                      Windows client
+```
+
+The laboratory network is isolated from the home network. This is especially important before configuring DHCP, so that the lab cannot distribute addresses to real devices.
+
+# Progress
+
+- [x] Launching Windows Server VM
+- [x] Installing Windows Server 2025
+- [x] Selecting Standard Evaluation — Desktop Experience
+- [x] Preparing the Windows 11 client VM
+- [x] Creating the isolated VirtualBox network
+- [x] Preparing `DC01` for administration
+- [x] Configuring IPv4 addressing
+- [x] Understanding subnet mask, gateway and DNS
+- [x] Testing connectivity between `DC01` and `WIN11-01`
+- [x] Troubleshooting ping and ICMP through Windows Firewall
+- [x] Configuring remote administration with RDP
+- [x] Connecting from `WIN11-01` to `DC01` using RDP
+- [x] Troubleshooting RDP and firewall configuration
+- [ ] PowerShell basics for administrators 
+- [ ] Process management and monitoring
+- [ ] Windows services
+- [ ] Event Viewer and Windows logs
+- [ ] Windows Firewall administration
+- [ ] Roles and Features
+- [ ] Installing Active Directory Domain Services
+- [ ] Promoting `DC01` to a Domain Controller
+- [ ] DNS in Active Directory
+- [ ] Organizational Units
+- [ ] Domain users and groups
+- [ ] File Server configuration
+- [ ] NTFS permissions and Share permissions
+- [ ] Group Policy basics
+- [ ] Practical Group Policy deployment
+- [ ] Joining `WIN11-01` to the domain
+- [ ] Delegating administration and least privilege
+- [ ] DHCP configuration
+- [ ] PowerShell automation and Task Scheduler
+- [ ] Backup and recovery
+- [ ] Final troubleshooting scenarios
+- [ ] Final company environment project
+
+# Learning approach
+
+This project follows a practical, task-based learning approach.
+
+- Each task has a clear goal and completion condition.
+- The first attempt is made independently.
+- Commands are not provided immediately unless help is needed.
+- Troubleshooting starts with collecting information and narrowing down the cause.
+- Every change is verified after it is made.
+- Important results, problems and solutions are documented.
