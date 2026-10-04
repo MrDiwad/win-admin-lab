@@ -64,8 +64,8 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Connecting from `WIN11-01` to `DC01` using RDP
 - [x] Troubleshooting RDP and firewall configuration
 - [x] PowerShell basics for administrators 
-- [ ] Process management and monitoring
-- [ ] Windows services
+- [x] Process management and monitoring
+- [x] Windows services
 - [ ] Event Viewer and Windows logs
 - [ ] Windows Firewall administration
 - [ ] Roles and Features
