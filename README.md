@@ -66,7 +66,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] PowerShell basics for administrators 
 - [x] Process management and monitoring
 - [x] Windows services
-- [ ] Event Viewer and Windows logs
+- [x] Event Viewer and Windows logs
 - [ ] Windows Firewall administration
 - [ ] Roles and Features
 - [ ] Installing Active Directory Domain Services
