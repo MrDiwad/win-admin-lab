@@ -54,8 +54,6 @@ The laboratory network is isolated from the home network. This is especially imp
 
 - [x] Launching Windows Server VM
 - [x] Installing Windows Server 2025
-- [x] Selecting Standard Evaluation — Desktop Experience
-- [x] Preparing the Windows 11 client VM
 - [x] Creating the isolated VirtualBox network
 - [x] Preparing `DC01` for administration
 - [x] Configuring IPv4 addressing
@@ -65,7 +63,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Configuring remote administration with RDP
 - [x] Connecting from `WIN11-01` to `DC01` using RDP
 - [x] Troubleshooting RDP and firewall configuration
-- [ ] PowerShell basics for administrators 
+- [x] PowerShell basics for administrators 
 - [ ] Process management and monitoring
 - [ ] Windows services
 - [ ] Event Viewer and Windows logs
