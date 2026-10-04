@@ -10,19 +10,20 @@ Short command and configuration notes from the completed parts of the lab.
 - `arp -a` — displays the ARP table and helps confirm local network visibility
 - `ping google.com` — tests name resolution in the isolated lab; final result was not recorded
 
-## Network troubleshooting
+- ### Task 4 — PowerShell: Administration Basics
 
-- Ping timeout — does not automatically mean that the IP configuration is wrong
-- `arp -a` shows the host — the machines can see each other at the local network level
-- ICMP Echo Request — must be allowed through the firewall for ping to work
-- Windows Firewall — check it before changing IP addresses or VirtualBox settings
-
-## RDP / remote administration
-
-- Remote Desktop — enabled on `DC01`
-- RDP connection — `WIN11-01` connected successfully to `DC01`
-- Firewall profiles — checked Domain, Private and Public profiles
-- `Action = Allow` — the rule allows matching traffic when active
-- `Enabled = No` — the rule is currently inactive
-- `Remote Desktop` — refers to RDP and graphical remote access
-- `OpenSSH` — refers to SSH and is not the same as RDP
+- `systeminfo` — Display detailed system configuration (legacy CLI text output).
+- `Get-ComputerInfo` — Get comprehensive system configuration object.
+- `Select-Object` (alias: `select`) — Select specific object properties or limit output count (`-First`).
+- `Format-List` (alias: `fl`) — Format output as a vertical key-value list (prevents truncation).
+- `Get-Service` (alias: `gsv`) — Retrieve system services and their status.
+- `Where-Object` (alias: `where`, `?`) — Filter pipeline objects based on property values (`-eq`, `-ne`, `-like`).
+- `Measure-Object` — Count or calculate objects in pipeline (PowerShell equivalent of `wc -l`).
+- `Get-Process` (alias: `ps`, `gps`) — Retrieve active processes.
+- `Sort-Object` (alias: `sort`) — Sort objects by property (`-Descending`).
+- `Get-LocalUser` — List local user accounts and account status (`Enabled`).
+- `Get-LocalGroupMember` — List members of a local security group.
+- `New-Item` — Create a file (`-ItemType File`) or directory (`-ItemType Directory`).
+- `Rename-Computer` — Change the computer hostname (requires reboot).
+- `Restart-Computer` — Reboot the system from the console.
+- `hostname` / `$env:COMPUTERNAME` — Return the current machine name.
