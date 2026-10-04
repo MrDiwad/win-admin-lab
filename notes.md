@@ -27,3 +27,14 @@ Short command and configuration notes from the completed parts of the lab.
 - `Rename-Computer` — Change the computer hostname (requires reboot).
 - `Restart-Computer` — Reboot the system from the console.
 - `hostname` / `$env:COMPUTERNAME` — Return the current machine name.
+
+### Task 5 — Process and Service Management
+
+- `Start-Service` — Start a stopped service.
+- `Stop-Service` — Stop a running service.
+- `Restart-Service` — Restart a running service.
+- `Set-Service` — Configure service startup type (`-StartupType Automatic|Manual|Disabled`).
+- `(Get-Service <Name>).DependentServices` — List services that depend on this service.
+- `(Get-Service <Name>).ServicesDependedOn` — List prerequisites required by this service.
+- `Start-Process` — Launch a process/application in the background.
+- `Stop-Process` (alias: `kill`) — Terminate a running process by ID (`-Id`) or name (`-Name`).
