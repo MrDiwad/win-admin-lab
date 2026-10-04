@@ -38,3 +38,12 @@ Short command and configuration notes from the completed parts of the lab.
 - `(Get-Service <Name>).ServicesDependedOn` — List prerequisites required by this service.
 - `Start-Process` — Launch a process/application in the background.
 - `Stop-Process` (alias: `kill`) — Terminate a running process by ID (`-Id`) or name (`-Name`).
+
+- ### Task 6 — Event Viewer and Windows Logs
+
+- `Get-EventLog` — Retrieve events from classic event logs (System, Application).
+- `Get-WinEvent` — Modern, high-performance cmdlet for querying all Windows event logs.
+- `Get-WinEvent -LogName <Name> -MaxEvents <N>` — Fetch the latest N events from a specific log.
+- `Get-WinEvent -FilterHashtable @{LogName='<Log>'; Id=<ID>}` — Query events filtered at the source (fastest method).
+- Event ID `4624` — Successful account logon (Security log).
+- Event ID `4625` — Failed account logon attempt (Security log).
