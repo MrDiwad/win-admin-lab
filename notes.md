@@ -83,3 +83,11 @@ Short command and configuration notes from the completed parts of the lab.
 - `Get-ADDomain` — View Active Directory domain details, partitions, and domain modes.
 - `Get-ADDomainController` — Inspect the local Domain Controller configuration, roles, and status.
 - DSRM (Directory Services Restore Mode) — Safe mode recovery password used for offline AD database repairs.
+
+### Task 11 — Active Directory DNS Infrastructure
+
+- `Get-DnsServerZone` — List all forward and reverse lookup zones on the DNS server.
+- `Get-DnsServerResourceRecord` — Query and view DNS records within a zone.
+- `Resolve-DnsName` — PowerShell cmdlet to query DNS servers (modern replacement for `nslookup` / `dig`).
+- Active Directory-Integrated DNS (`IsDsIntegrated: True`) — DNS records stored in `ntds.dit` with multi-master replication and secure dynamic updates.
+- SRV Records (Service Location) — Special DNS records used by clients to locate Domain Controllers and services (e.g., LDAP on 389, Kerberos on 88).
