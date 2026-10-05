@@ -67,3 +67,11 @@ Short command and configuration notes from the completed parts of the lab.
 - `-IncludeManagementTools` — Parameter to include GUI consoles and PowerShell modules for managing the role.
 - `-WhatIf` — Simulate execution without making any actual changes to the system.
 - `Uninstall-WindowsFeature` (alias: `Remove-WindowsFeature`) — Remove an installed role or feature.
+
+- ### Task 9 — Installing Active Directory Domain Services (AD DS)
+
+- `Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools` — Install the AD DS server role and RSAT management tools.
+- `Get-Module -ListAvailable ActiveDirectory` — Verify installation of the Active Directory PowerShell module.
+- Domain Controller (DC) — Server hosting the AD DS directory database.
+- Forest / Domain — Logical hierarchy boundaries for centralized authentication (e.g., `corp.test`).
+- `ntds.dit` — Physical database file storing all directory objects (users, groups, machines).
