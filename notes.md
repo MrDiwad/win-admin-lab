@@ -47,3 +47,14 @@ Short command and configuration notes from the completed parts of the lab.
 - `Get-WinEvent -FilterHashtable @{LogName='<Log>'; Id=<ID>}` — Query events filtered at the source (fastest method).
 - Event ID `4624` — Successful account logon (Security log).
 - Event ID `4625` — Failed account logon attempt (Security log).
+
+- ### Task 7 — Windows Firewall Administration
+
+- `Get-NetFirewallProfile` — View status and default actions for Domain, Private, and Public profiles.
+- `Get-NetConnectionProfile` — Check network category (Public, Private, Domain) assigned to active NICs.
+- `Get-NetFirewallRule` — List and inspect firewall rules.
+- `Enable-NetFirewallRule` — Enable a disabled firewall rule.
+- `Disable-NetFirewallRule` — Disable an active firewall rule without deleting it.
+- `New-NetFirewallRule` — Create a new inbound/outbound firewall rule.
+- `Remove-NetFirewallRule` — Permanently delete a firewall rule.
+- `Test-NetConnection` (alias: `tnc`) — Test network connectivity, ICMP ping, and specific TCP ports.
