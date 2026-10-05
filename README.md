@@ -69,7 +69,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Event Viewer and Windows logs
 - [x] Windows Firewall administration
 - [x] Roles and Features
-- [ ] Installing Active Directory Domain Services
+- [x] Installing Active Directory Domain Services
 - [ ] Promoting `DC01` to a Domain Controller
 - [ ] DNS in Active Directory
 - [ ] Organizational Units
