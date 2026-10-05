@@ -75,3 +75,11 @@ Short command and configuration notes from the completed parts of the lab.
 - Domain Controller (DC) — Server hosting the AD DS directory database.
 - Forest / Domain — Logical hierarchy boundaries for centralized authentication (e.g., `corp.test`).
 - `ntds.dit` — Physical database file storing all directory objects (users, groups, machines).
+
+- ### Task 10 — Promoting Server to Domain Controller
+
+- `Install-ADDSForest -DomainName "<Domain>"` — Promote server to the first Domain Controller in a new Active Directory forest.
+- `whoami` — Verify current security context (transitions from `DC01\User` to `DOMAIN\User`).
+- `Get-ADDomain` — View Active Directory domain details, partitions, and domain modes.
+- `Get-ADDomainController` — Inspect the local Domain Controller configuration, roles, and status.
+- DSRM (Directory Services Restore Mode) — Safe mode recovery password used for offline AD database repairs.
