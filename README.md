@@ -67,7 +67,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Process management and monitoring
 - [x] Windows services
 - [x] Event Viewer and Windows logs
-- [ ] Windows Firewall administration
+- [x] Windows Firewall administration
 - [ ] Roles and Features
 - [ ] Installing Active Directory Domain Services
 - [ ] Promoting `DC01` to a Domain Controller
