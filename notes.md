@@ -58,3 +58,12 @@ Short command and configuration notes from the completed parts of the lab.
 - `New-NetFirewallRule` — Create a new inbound/outbound firewall rule.
 - `Remove-NetFirewallRule` — Permanently delete a firewall rule.
 - `Test-NetConnection` (alias: `tnc`) — Test network connectivity, ICMP ping, and specific TCP ports.
+
+### Task 8 — Windows Server Roles and Features
+
+- `Get-WindowsFeature` — List all available and installed roles and features (`[X]` = Installed, `[ ]` = Available).
+- `Get-WindowsFeature | Where-Object Installed` — Filter and display only currently installed components.
+- `Install-WindowsFeature` (alias: `Add-WindowsFeature`) — Install a specified role or feature.
+- `-IncludeManagementTools` — Parameter to include GUI consoles and PowerShell modules for managing the role.
+- `-WhatIf` — Simulate execution without making any actual changes to the system.
+- `Uninstall-WindowsFeature` (alias: `Remove-WindowsFeature`) — Remove an installed role or feature.
