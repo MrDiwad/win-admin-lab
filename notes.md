@@ -116,3 +116,12 @@ Short command and configuration notes from the completed parts of the lab.
 - `Get-ADGroupMember -Identity "<Group>"` — List all members of a specific AD group.
 - `Get-ADPrincipalGroupMembership -Identity "<User>"` — List all groups a user belongs to.
 - Security Group vs Distribution Group — Security groups have a SID and grant access to resources; Distribution groups are used only for email distribution lists.
+
+### Task 15 — Windows File Server and SMB Sharing
+
+- `New-SmbShare -Name "<Share>" -Path "<Path>" -FullAccess "<Group>"` — Create a new network share over SMB protocol.
+- `Get-SmbShare` — List all SMB shares on the machine (both public and hidden administrative shares).
+- `Remove-SmbShare -Name "<Share>"` — Stop sharing a folder and delete the SMB share.
+- UNC Path (Universal Naming Convention) — Network addressing syntax: `\\ServerName\ShareName`.
+- Hidden / Administrative Shares (`$`) — Shares ending with `$` (e.g., `C$`, `ADMIN$`) are invisible during network browsing.
+- SMB Port — TCP port 445.
