@@ -99,3 +99,12 @@ Short command and configuration notes from the completed parts of the lab.
 - `dsa.msc` — Open the "Active Directory Users and Computers" GUI management console.
 - Distinguished Name (DN) — Unique LDAP path of an object (e.g., `OU=Finance,DC=corp,DC=test`).
 - Organizational Unit (OU) vs Group — OUs are logical containers used for GPO linking and administrative delegation; Groups are security principals used for resource permissions.
+
+### Task 13 — Active Directory Domain Users
+
+- `New-ADUser` — Create a new domain user account with specified attributes (Name, SamAccountName, UPN, Path).
+- `Get-ADUser -Filter *` — Query domain users (use `-Properties *` to see all extended attributes).
+- `Set-ADUser` — Modify attributes of an existing domain user account.
+- `Disable-ADAccount` / `Enable-ADAccount` — Disable or enable a user account.
+- `Unlock-ADAccount` — Unlock a user account locked due to failed password attempts.
+- `ConvertTo-SecureString "<Pass>" -AsPlainText -Force` — Convert plaintext password into an encrypted SecureString object for PowerShell.
