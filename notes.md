@@ -91,3 +91,11 @@ Short command and configuration notes from the completed parts of the lab.
 - `Resolve-DnsName` — PowerShell cmdlet to query DNS servers (modern replacement for `nslookup` / `dig`).
 - Active Directory-Integrated DNS (`IsDsIntegrated: True`) — DNS records stored in `ntds.dit` with multi-master replication and secure dynamic updates.
 - SRV Records (Service Location) — Special DNS records used by clients to locate Domain Controllers and services (e.g., LDAP on 389, Kerberos on 88).
+
+### Task 12 — Active Directory Organizational Units (OUs)
+
+- `Get-ADOrganizationalUnit -Filter *` — Query all Organizational Units in the domain.
+- `New-ADOrganizationalUnit -Name "<Name>" -Path "<DN>"` — Create a new OU at a specific LDAP path (Distinguished Name).
+- `dsa.msc` — Open the "Active Directory Users and Computers" GUI management console.
+- Distinguished Name (DN) — Unique LDAP path of an object (e.g., `OU=Finance,DC=corp,DC=test`).
+- Organizational Unit (OU) vs Group — OUs are logical containers used for GPO linking and administrative delegation; Groups are security principals used for resource permissions.
