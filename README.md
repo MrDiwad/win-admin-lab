@@ -74,7 +74,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] DNS in Active Directory
 - [x] Organizational Units
 - [x] Domain users and groups
-- [ ] File Server configuration
+- [x] File Server configuration
 - [ ] NTFS permissions and Share permissions
 - [ ] Group Policy basics
 - [ ] Practical Group Policy deployment
