@@ -108,3 +108,11 @@ Short command and configuration notes from the completed parts of the lab.
 - `Disable-ADAccount` / `Enable-ADAccount` — Disable or enable a user account.
 - `Unlock-ADAccount` — Unlock a user account locked due to failed password attempts.
 - `ConvertTo-SecureString "<Pass>" -AsPlainText -Force` — Convert plaintext password into an encrypted SecureString object for PowerShell.
+
+- ### Task 14 — Active Directory Domain Groups
+
+- `New-ADGroup` — Create a new domain group (specifying `-GroupScope Global` and `-GroupCategory Security`).
+- `Add-ADGroupMember -Identity "<Group>" -Members "<User>"` — Add one or more members to an AD group.
+- `Get-ADGroupMember -Identity "<Group>"` — List all members of a specific AD group.
+- `Get-ADPrincipalGroupMembership -Identity "<User>"` — List all groups a user belongs to.
+- Security Group vs Distribution Group — Security groups have a SID and grant access to resources; Distribution groups are used only for email distribution lists.
