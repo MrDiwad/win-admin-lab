@@ -72,7 +72,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Installing Active Directory Domain Services
 - [x] Promoting `DC01` to a Domain Controller
 - [x] DNS in Active Directory
-- [ ] Organizational Units
+- [x] Organizational Units
 - [ ] Domain users and groups
 - [ ] File Server configuration
 - [ ] NTFS permissions and Share permissions
