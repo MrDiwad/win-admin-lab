@@ -148,3 +148,11 @@ Short command and configuration notes from the completed parts of the lab.
 - `Get-GPO -All` — PowerShell cmdlet to retrieve all GPOs within the domain.
 - `gpupdate /force` — Forces an immediate refresh of all computer and user policies instead of waiting for the 90-minute cycle.
 - `gpresult /r` — Displays an RSoP (Resultant Set of Policy) summary showing which GPOs were actually applied.
+
+- ### Task 18 — Group Policy: Practical Deployment and Troubleshooting
+
+- GPO Creation & Linking — A GPO must be created in 'Group Policy Objects' and explicitly linked to a Domain or OU to take effect.
+- Interactive Logon Policy — Security settings (`Interactive logon: Message title/text`) defining legally required pre-login warning banners.
+- Registry Backing (`HKLM`) — Computer Configuration GPOs physically write their enforcement values to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies`.
+- Domain Membership Requirement — GPOs are only evaluated and applied by domain-joined computer and user accounts (Workgroup machines ignore AD GPOs).
+- Full Logon vs Session Unlock — Logon banners require a full sign-out and sign-in cycle to display, rather than a workstation unlock.
