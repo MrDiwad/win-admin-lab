@@ -77,7 +77,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] File Server configuration
 - [x] NTFS permissions and Share permissions
 - [x] Group Policy basics
-- [ ] Practical Group Policy deployment
+- [x] Practical Group Policy deployment
 - [ ] Joining `WIN11-01` to the domain
 - [ ] Delegating administration and least privilege
 - [ ] DHCP configuration
