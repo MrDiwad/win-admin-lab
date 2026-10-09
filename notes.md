@@ -125,3 +125,26 @@ Short command and configuration notes from the completed parts of the lab.
 - UNC Path (Universal Naming Convention) — Network addressing syntax: `\\ServerName\ShareName`.
 - Hidden / Administrative Shares (`$`) — Shares ending with `$` (e.g., `C$`, `ADMIN$`) are invisible during network browsing.
 - SMB Port — TCP port 445.
+
+- ### Task 16 — NTFS Permissions vs Share Permissions
+
+- Share Permissions — Network-level access gate for SMB shares; offers Read, Change, and Full Control.
+- NTFS Permissions (ACLs) — File system-level security applied locally and over the network; granular permissions (Read, Write, Modify, Full Control).
+- Most Restrictive Wins — Rule stating that the effective permission over the network is the most restrictive combination of Share and NTFS permissions.
+- `icacls "<Path>" /inheritance:d` — Disables inheritance and copies inherited permissions as explicit access control entries (Convert).
+- `icacls "<Path>" /remove "<Identity>"` — Removes an identity (user or group) from the NTFS access control list.
+- `icacls "<Path>" /grant "<Identity>":(OI)(CI)M` — Grants Modify permissions with Object Inherit (files) and Container Inherit (subfolders).
+- `net use Z: \\Server\Share /user:Domain\User` — Maps a network share to drive letter Z: using specific domain user credentials.
+- `net use * /delete /y` — Disconnects and purges all active SMB network connections.
+
+- ### Task 17 — Group Policy (GPO): Architecture and Fundamentals
+
+- GPO (Group Policy Object) — Centralized configuration management framework for Active Directory environments.
+- LSDOU Processing Order — Local -> Site -> Domain -> OU. The last applied policy wins in case of conflicts (OU overrides Domain).
+- Computer Configuration — Applied at system boot; targets the computer account regardless of logged-in user.
+- User Configuration — Applied at user logon; targets the user account across any domain workstation.
+- SYSVOL Share — Special domain-wide shared folder (`\\Domain\SYSVOL`) storing GPO templates and scripts, replicated via DFS-R.
+- `gpmc.msc` — Group Policy Management Console; primary administrative tool for managing GPOs and links.
+- `Get-GPO -All` — PowerShell cmdlet to retrieve all GPOs within the domain.
+- `gpupdate /force` — Forces an immediate refresh of all computer and user policies instead of waiting for the 90-minute cycle.
+- `gpresult /r` — Displays an RSoP (Resultant Set of Policy) summary showing which GPOs were actually applied.
