@@ -156,3 +156,12 @@ Short command and configuration notes from the completed parts of the lab.
 - Registry Backing (`HKLM`) — Computer Configuration GPOs physically write their enforcement values to `HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies`.
 - Domain Membership Requirement — GPOs are only evaluated and applied by domain-joined computer and user accounts (Workgroup machines ignore AD GPOs).
 - Full Logon vs Session Unlock — Logon banners require a full sign-out and sign-in cycle to display, rather than a workstation unlock.
+
+- ### Task 19 — Domain Joining and Workstation Management
+
+- `Resolve-DnsName <Domain>` — Verifies DNS resolution of the AD domain controller from client workstations.
+- `Add-Computer -DomainName "<Domain>" -Credential (Get-Credential) -Restart` — Joins a client workstation to an Active Directory domain and restarts the machine.
+- `sysdm.cpl` — Classic System Properties GUI applet to modify computer name and domain membership.
+- Default `CN=Computers` Container — Default landing container for newly joined computer accounts; cannot have GPOs directly linked to it.
+- `Move-ADObject` / Drag-and-drop in `dsa.msc` — Moving computer accounts into designated Organizational Units (e.g., `OU=Workstations`) for proper GPO application.
+- Domain User Profile — Local profile created on the client machine upon first logon of a domain user (`corp\username`).
