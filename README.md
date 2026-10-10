@@ -97,11 +97,11 @@ This project follows a practical, task-based learning approach.
 - Every change is verified after it is made.
 - Important results, problems and solutions are documented.
 
-#dsa.msc view
+# dsa.msc view
 <img width="1330" height="1016" alt="image" src="https://github.com/user-attachments/assets/aed5a02f-130e-4e50-b07c-db76307fc792" />
 
-#dhcp panel view
+# dhcp panel view
 <img width="1548" height="840" alt="image" src="https://github.com/user-attachments/assets/a19647a9-6070-422b-93b0-f794b402ba4c" />
 
-#view on shared disk from kzielinski (worker from HR)
+# view on shared disk from kzielinski (worker from HR)
 <img width="2026" height="1174" alt="image" src="https://github.com/user-attachments/assets/6e58bc6a-a1a0-40bf-ae56-77957a060821" />
