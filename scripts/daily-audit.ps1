@@ -16,4 +16,3 @@ $($Users | Out-String)
 "@
 
 $Report | Out-File -FilePath "C:\AdminLab\daily-report.txt" -Encoding utf8
-```[cite: 1]
