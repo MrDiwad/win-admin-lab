@@ -173,3 +173,13 @@ Short command and configuration notes from the completed parts of the lab.
 - Active Directory Tiering Model — Security architecture separating administrative boundaries: Tier 0 (Domain Controllers/Admins), Tier 1 (Servers/Apps), Tier 2 (Workstations/Helpdesk).
 - RSAT (Remote Server Administration Tools) — Client-side toolset allowing Helpdesk technicians to manage AD remotely from their Windows workstations.
 - Protected Users / Groups — High-privileged domain accounts protected from delegated credential changes by `AdminSDHolder`.
+
+- ### Task 21 — Dynamic Host Configuration Protocol (DHCP) Server
+
+- DORA Process — Four-step DHCP negotiation: Discover (client broadcast) -> Offer (server response) -> Request (client acceptance) -> Acknowledge (server confirmation).
+- DHCP Authorization — AD DS security feature requiring DHCP servers to be authorized in Active Directory before servicing clients.
+- DHCP Scope — Defined pool of IP addresses allocated for lease on a specific subnet.
+- Option 006 (DNS Servers) — DHCP option delivering the IP addresses of DNS servers (crucial for AD domain resolution).
+- DHCP Lease Time — Duration for which a client can use an assigned IP address before renewing or releasing it back to the pool.
+- DHCP Reservation — Binding a specific IP address to a client's MAC address so it always receives the same IP dynamically.
+- `dhcpmgmt.msc` — Microsoft Management Console snap-in for managing Windows DHCP Server.
