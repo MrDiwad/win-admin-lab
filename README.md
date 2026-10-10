@@ -79,10 +79,10 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] Group Policy basics
 - [x] Practical Group Policy deployment
 - [x] Joining `WIN11-01` to the domain
-- [ ] Delegating administration and least privilege
-- [ ] DHCP configuration
-- [ ] PowerShell automation and Task Scheduler
-- [ ] Backup and recovery
+- [x] Delegating administration and least privilege
+- [x] DHCP configuration
+- [x] PowerShell automation and Task Scheduler
+- [x] Backup and recovery
 - [ ] Final troubleshooting scenarios
 - [ ] Final company environment project
 
