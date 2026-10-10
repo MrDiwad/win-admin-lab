@@ -83,7 +83,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] DHCP configuration
 - [x] PowerShell automation and Task Scheduler
 - [x] Backup and recovery
-- [ ] Final troubleshooting scenarios
+- [x] Final troubleshooting scenarios
 - [ ] Final company environment project
 
 # Learning approach
