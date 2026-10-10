@@ -1,56 +1,58 @@
-# windows-admin-lab
+# Windows-Admin-Lab
 
-Main goal of this project is to learn by practice how to administer Windows-based environments.
+The main goal of this project is to learn and demonstrate practical system administration and infrastructure management in a Windows-based enterprise environment.
 
-# Technologies to learn:
+# Technologies covered:
 
-- Windows Server administration
-- Windows client administration
-- networking and troubleshooting
-- remote administration
-- Active Directory and DNS
-- DHCP
-- users, groups and permissions
-- PowerShell
-- processes and services
-- Windows logs and monitoring
-- Windows Firewall and security
-- Group Policy
-- automation
-- backup and recovery
+- Windows Server 2025 administration
+- Windows 11 Enterprise client administration
+- Core networking & layered troubleshooting (OSI)
+- Remote administration (RDP, PowerShell)
+- Active Directory Domain Services (AD DS) & Integrated DNS
+- Dynamic Host Configuration Protocol (DHCP) & DORA process
+- Role-Based Access Control (RBAC) & NTFS vs Share permissions
+- Advanced PowerShell scripting & automation
+- Process and service management
+- Windows Event Logs & security auditing (Security Log, Event IDs)
+- Windows Defender Firewall hardening
+- Group Policy Objects (GPO architecture, LSDOU, Drive Maps, Security Banners)
+- Task Scheduler automation under service accounts
+- Backup, Disaster Recovery & Active Directory Recycle Bin
 
-# Environment
+# Environment & Specifications
 
-- Windows 11 host
-- Windows Server 2025 Standard Evaluation - Desktop Experience guest (`DC01`)
-- Windows 11 Enterprise guest (`WIN11-01`)
-- Oracle VirtualBox
-- Isolated VirtualBox Internal Network: `win-admin-lab`
-- `DC01`: 4096 MB RAM, 2 CPU, 50 GB dynamically allocated disk
-- `DC01` IPv4 address: `10.0.0.1/24`
-- `WIN11-01` IPv4 address: `10.0.0.10/24`
-- Gateway on `DC01`: none — intentionally isolated from the Internet
-- DNS on `DC01`: `10.0.0.1`
-- Planned lab domain: `corp.test`
+- **Host:** Windows 11
+- **Domain Controller (`DC01`):** Windows Server 2025 Standard Evaluation (Desktop Experience)
+  - Resources: 4096 MB RAM, 2 vCPU, 50 GB dynamic disk
+  - IPv4: `10.0.0.1/24` (Static)
+  - DNS: `10.0.0.1` (Self)
+  - Gateway: None (Intentionally isolated)
+  - Forest / Domain: `corp.test`
+- **Workstation Client (`WIN11-01`):** Windows 11 Enterprise
+  - IPv4: Initially static `10.0.0.10/24`, later dynamic DHCP lease (`10.0.0.100`)
+  - DNS: `10.0.0.1` (Provided via DHCP Option 006)
+  - Domain Status: Joined to `corp.test` (`OU=Workstations`)
+- **Virtualization:** Oracle VirtualBox
+- **Network Mode:** Isolated Internal Network (`win-admin-lab`)
 
 # Lab architecture
 
 ```text
-                      Windows Server
+                      Windows Server 2025
                            DC01
-                    10.0.0.1/24
+                    10.0.0.1/24 (Static)
+                   [AD DS, DNS, DHCP, SMB]
                            │
-                 Internal Network
+                 Internal Network (Isolated)
                    win-admin-lab
                            │
                     WIN11-01
-                  10.0.0.10/24
-                      Windows client
-```
+                  10.0.0.100/24 (DHCP)
+                Windows 11 Client (Joined)
 
 The laboratory network is isolated from the home network. This is especially important before configuring DHCP, so that the lab cannot distribute addresses to real devices.
 
-# Progress
+# Milestones
 
 - [x] Launching Windows Server VM
 - [x] Installing Windows Server 2025
@@ -97,11 +99,17 @@ This project follows a practical, task-based learning approach.
 - Every change is verified after it is made.
 - Important results, problems and solutions are documented.
 
-# dsa.msc view
+- # Key implementation highlights
+- **Role-Based Access Control (RBAC):** Department isolation (IT, Finance, Management, HR) strictly enforced via NTFS ACLs and Active Directory Global Security Groups.
+- **Principle of Least Privilege:** Helpdesk delegation configured on target OUs without exposing Domain Admin privileges.
+- **Automated Configuration via GPO:** Automated network drive mapping (`Z:`) and corporate interactive logon banners deployed through Group Policy.
+- **Business Continuity:** Active Directory Recycle Bin enabled for instant object recovery, automated Task Scheduler audits, and hardened DHCP authorization.
+
+# Active Directory Users & Computers (dsa.msc)
 <img width="1330" height="1016" alt="image" src="https://github.com/user-attachments/assets/aed5a02f-130e-4e50-b07c-db76307fc792" />
 
-# dhcp panel view
+# DHCP Server Management (dhcpmgmt.msc)
 <img width="1548" height="840" alt="image" src="https://github.com/user-attachments/assets/a19647a9-6070-422b-93b0-f794b402ba4c" />
 
-# view on shared disk from kzielinski (worker from HR)
+# Mapped Network Drive from Client (kzielinski - HR Department)
 <img width="2026" height="1174" alt="image" src="https://github.com/user-attachments/assets/6e58bc6a-a1a0-40bf-ae56-77957a060821" />
