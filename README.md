@@ -100,7 +100,7 @@ This project follows a practical, task-based learning approach.
 - Every change is verified after it is made.
 - Important results, problems and solutions are documented.
 
-- # Key implementation highlights
+# Key implementation highlights
 - **Role-Based Access Control (RBAC):** Department isolation (IT, Finance, Management, HR) strictly enforced via NTFS ACLs and Active Directory Global Security Groups.
 - **Principle of Least Privilege:** Helpdesk delegation configured on target OUs without exposing Domain Admin privileges.
 - **Automated Configuration via GPO:** Automated network drive mapping (`Z:`) and corporate interactive logon banners deployed through Group Policy.
