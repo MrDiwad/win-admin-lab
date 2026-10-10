@@ -22,7 +22,7 @@ Main goal of this project is to learn by practice how to administer Windows-base
 # Environment
 
 - Windows 11 host
-- Windows Server 2025 Standard Evaluation — Desktop Experience guest (`DC01`)
+- Windows Server 2025 Standard Evaluation - Desktop Experience guest (`DC01`)
 - Windows 11 Enterprise guest (`WIN11-01`)
 - Oracle VirtualBox
 - Isolated VirtualBox Internal Network: `win-admin-lab`
@@ -96,3 +96,9 @@ This project follows a practical, task-based learning approach.
 - Troubleshooting starts with collecting information and narrowing down the cause.
 - Every change is verified after it is made.
 - Important results, problems and solutions are documented.
+
+<img width="1330" height="1016" alt="image" src="https://github.com/user-attachments/assets/aed5a02f-130e-4e50-b07c-db76307fc792" />
+
+<img width="1548" height="840" alt="image" src="https://github.com/user-attachments/assets/a19647a9-6070-422b-93b0-f794b402ba4c" />
+
+<img width="2026" height="1174" alt="image" src="https://github.com/user-attachments/assets/6e58bc6a-a1a0-40bf-ae56-77957a060821" />
