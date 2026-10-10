@@ -165,3 +165,11 @@ Short command and configuration notes from the completed parts of the lab.
 - Default `CN=Computers` Container — Default landing container for newly joined computer accounts; cannot have GPOs directly linked to it.
 - `Move-ADObject` / Drag-and-drop in `dsa.msc` — Moving computer accounts into designated Organizational Units (e.g., `OU=Workstations`) for proper GPO application.
 - Domain User Profile — Local profile created on the client machine upon first logon of a domain user (`corp\username`).
+
+- ### Task 20 — Administrative Delegation and Principle of Least Privilege (RBAC)
+
+- Principle of Least Privilege — Security concept where users/identities receive only the minimum permissions required to perform their jobs.
+- Delegation of Control Wizard — Built-in GUI tool in `dsa.msc` to delegate specific administrative rights (e.g., password reset) on target OUs without granting Domain Admin rights.
+- Active Directory Tiering Model — Security architecture separating administrative boundaries: Tier 0 (Domain Controllers/Admins), Tier 1 (Servers/Apps), Tier 2 (Workstations/Helpdesk).
+- RSAT (Remote Server Administration Tools) — Client-side toolset allowing Helpdesk technicians to manage AD remotely from their Windows workstations.
+- Protected Users / Groups — High-privileged domain accounts protected from delegated credential changes by `AdminSDHolder`.
