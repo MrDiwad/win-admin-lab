@@ -50,6 +50,7 @@ The main goal of this project is to learn and demonstrate practical system admin
                   10.0.0.100/24 (DHCP)
                 Windows 11 Client (Joined)
 
+```
 The laboratory network is isolated from the home network. This is especially important before configuring DHCP, so that the lab cannot distribute addresses to real devices.
 
 # Milestones
