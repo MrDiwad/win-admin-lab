@@ -84,7 +84,7 @@ The laboratory network is isolated from the home network. This is especially imp
 - [x] PowerShell automation and Task Scheduler
 - [x] Backup and recovery
 - [x] Final troubleshooting scenarios
-- [ ] Final company environment project
+- [x] Final company environment project
 
 # Learning approach
 
