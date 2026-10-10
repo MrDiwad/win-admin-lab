@@ -192,3 +192,12 @@ Short command and configuration notes from the completed parts of the lab.
 - `NT AUTHORITY\SYSTEM` — Built-in Windows service account used for unattended background tasks; runs without interactive login or password expiration.
 - Task Result `0x0` — Return code confirming successful task execution in Task Scheduler.
 - `Get-Date -Format "<specifier>"` — Retrieves and formats timestamp strings (e.g., `yyyy-MM-dd HH:mm:ss`).
+
+- ### Task 23 — Windows Server Backup, System State, and AD Recycle Bin
+
+- `NTDS.dit` — Core database file of Active Directory located at `C:\Windows\NTDS`, locked at runtime by `lsass.exe`.
+- System State Backup — Comprehensive backup of mission-critical Windows Server components: Active Directory database, SYSVOL share, registry, and boot files.
+- `wbadmin start systemstatebackup -backupTarget:<Drive> -quiet` — Initiates an automated System State backup via VSS.
+- `Enable-ADOptionalFeature 'Recycle Bin Feature' ...` — Permanently enables the Active Directory Recycle Bin for the AD forest.
+- `Restore-ADObject` — Recovers deleted Active Directory objects from the `Deleted Objects` container, preserving their original SID, group memberships, and attributes.
+- DSRM (Directory Services Restore Mode) — Safe mode boot option used to perform authoritative restores of Active Directory.
