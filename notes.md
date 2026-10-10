@@ -183,3 +183,12 @@ Short command and configuration notes from the completed parts of the lab.
 - DHCP Lease Time — Duration for which a client can use an assigned IP address before renewing or releasing it back to the pool.
 - DHCP Reservation — Binding a specific IP address to a client's MAC address so it always receives the same IP dynamically.
 - `dhcpmgmt.msc` — Microsoft Management Console snap-in for managing Windows DHCP Server.
+
+### Task 22 — PowerShell Automation and Windows Task Scheduler
+
+- Task Scheduler (`taskschd.msc`) — Windows service and MMC snap-in for scheduling automated background tasks (equivalent to cron in Linux).
+- Action Configuration — Best practice for PowerShell jobs: Program: `powershell.exe`, Arguments: `-ExecutionPolicy Bypass -File "<Path>"`.
+- `-ExecutionPolicy Bypass` — Parameter allowing automated script execution without being blocked by system script-execution policies.
+- `NT AUTHORITY\SYSTEM` — Built-in Windows service account used for unattended background tasks; runs without interactive login or password expiration.
+- Task Result `0x0` — Return code confirming successful task execution in Task Scheduler.
+- `Get-Date -Format "<specifier>"` — Retrieves and formats timestamp strings (e.g., `yyyy-MM-dd HH:mm:ss`).
